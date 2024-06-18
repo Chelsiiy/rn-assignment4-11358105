@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function Login() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Jobizz</Text>
-      <Text style={styles.welcome}>Welcome Back</Text>
-      <Text style={styles.apply}>Let's login.Apply to jobs!</Text>
+      <Text style={styles.firstTitle}>JOBIZZ</Text>
+      <Text style={styles.title}>WELCOME BACK</Text>
+      <Text style={styles.subtitle}>LET'S LOGIN. APPLY TO JOBS</Text>
       <TextInput
         style={styles.input}
         placeholder="Username"
@@ -17,19 +17,10 @@ export default function Login() {
         placeholder="Password"
         secureTextEntry={true}
       />
-      <Button
-        title="Login"
-      />
-        <View style={styles.lineContainer}>
-        <View style={styles.line} />
-        <Text style={styles.orText}> Or continue with </Text>
-        <View style={styles.line} />
-      </View>
-
-
-      
-        
-
+      <TouchableOpacity style={styles.button} onPress={() => alert('Login button pressed')}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+      <img style={styles.Icons} >
       <StatusBar style="auto" />
     </View>
   );
@@ -39,52 +30,49 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'flex-start',
-    justifyContent: 'flex-start',
-    padding: 16,
+    alignItems: 'center',
+    justifyContent: 'flex-start', // Position content at the top
+    padding: 20,
+    paddingTop: 80, 
+  },
+  firstTitle: {
+    fontSize: 25,
+    color: 'blue',
+    marginBottom: 10,
+    fontWeight: 'bold',
   },
   title: {
-    fontSize: 22,
+    fontSize: 24,
     marginBottom: 10,
-    marginTop: 140,
-    marginLeft: 18,
-    fontWeight: 'bold',
-    color:'#5072A7',
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontSize: 18,
+    marginBottom: 20,
+    fontWeight: '300',
+    textAlign: 'center',
   },
   input: {
-    width: 310,
-    padding: 10,
-    marginVertical: 8,
+    width: '90', // Set width to a more reasonable value
+    maxWidth: 400,
+    padding: 12,
+    marginVertical: 10,
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 5,
-    marginBottom: 20,
-    marginLeft: 18,
   },
-  welcome: {
-    fontSize: 25,
-    marginBottom: 5,
-    marginLeft: 18,
-    fontWeight: 'bold',
-  },
-  apply: {
-    marginLeft: 18,
-    marginBottom: 60,
-    color: 'grey',
-  },
-  lineContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  button: {
+    backgroundColor: 'blue',
+    padding: 15,
     marginTop: 20,
-    marginBottom: 20,
+    width: '80%', // Keep consistent with input width
+    maxWidth: 400, 
+    alignItems: 'center',
+    borderRadius: 5,
   },
-  line: {
-    flex: 1,
-    height: 1,
-    backgroundColor: 'grey',
-  },
-  orText: {
-    marginHorizontal: 10,
-    color: 'grey',
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
