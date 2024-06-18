@@ -1,3 +1,4 @@
+// Login.js
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
@@ -17,10 +18,8 @@ export default function Login() {
         placeholder="Password"
         secureTextEntry={true}
       />
-      <Button
-        title="Login"
-        onPress={() => alert('Login button pressed')}
-      />
+    <Button style={styles.button} title="Login" onPress={() => alert('Login button pressed')} />
+
       <StatusBar style="auto" />
     </View>
   );
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 16,
+    padding: 10,
   },
   title: {
     fontSize: 24,
@@ -48,7 +47,16 @@ const styles = StyleSheet.create({
   },
   Firsttitle:{
     fontSize: 25 ,
-    alignItems:"flex-end",
     alignContent:"left",
+    color:'blue',
+    marginBottom: 25,
+    fontweight: "bold",
   }
+
+    button: {
+    backgroundColor:" blue",
+    
+    },
+
+  
 });
