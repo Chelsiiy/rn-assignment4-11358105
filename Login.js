@@ -20,7 +20,7 @@ export default function Login() {
       <TouchableOpacity style={styles.button} onPress={() => alert('Login button pressed')}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
-      <img style={styles.Icons} >
+      <Image source={require('./assets/104490_apple_icon.png')} style={styles.Icons}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'flex-start', // Position content at the top
+    justifyContent: 'flex-start',
     padding: 20,
     paddingTop: 80, 
   },
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   input: {
-    width: '90', // Set width to a more reasonable value
+    width: '90', 
     maxWidth: 400,
     padding: 12,
     marginVertical: 10,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     padding: 15,
     marginTop: 20,
-    width: '80%', // Keep consistent with input width
+    width: '80%', 
     maxWidth: 400, 
     alignItems: 'center',
     borderRadius: 5,
@@ -75,4 +75,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  Icons:{
+    width:50,
+    length:50,
+    borderRadius:10,
+  }
 });
