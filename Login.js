@@ -30,7 +30,7 @@ export default function Login() {
         <Image source={require('./assets/2993685_brand_brands_google_logo_logos_icon.png')} style={styles.icon}/>
         <Image source={require('./assets/3225194_app_facebook_logo_media_popular_icon.png')} style={styles.icon}/>
       </View>
-      <Text style={styles.apply}>
+      <Text style={styles.account}>
         Haven't got an account? 
         <Text style={styles.register} onPress={() => alert('Register button pressed')}> Register </Text>
       </Text>
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 5,
+    borderRadius: 10,
     marginBottom: 20,
     marginLeft: 18,
   },
@@ -124,4 +124,8 @@ const styles = StyleSheet.create({
     color: 'blue',
     textDecorationLine: 'underline',
   },
+  account:{
+    marginTop: 20,
+    alignSelf: 'center'
+  }
 });
