@@ -1,6 +1,7 @@
+
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View,Image } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
 
 export default function Login() {
   return (
@@ -25,8 +26,14 @@ export default function Login() {
         <Text style={styles.orText}>Or continue with</Text>
         <View style={styles.line} />
       </View>
-      <Image source={require('./assets/104490_apple_icon.png')} style={styles.icons}/>
-      <Image source={require('./assets/2993685_brand_brands_google_logo_logos_icon.png')} style={styles.icons}/>
+      <View style={styles.iconContainer}>
+        <Image source={require('./assets/104490_apple_icon.png')} style={styles.icon}/>
+        <Image source={require('./assets/2993685_brand_brands_google_logo_logos_icon.png')} style={styles.icon}/>
+        <Image source={require('./assets/3225194_app_facebook_logo_media_popular_icon.png')} style={styles.icon}/>
+        <text style={styles.apply}>Haven't got an account?
+        <text a href style={styles.register}> Register </text?
+        </text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -101,10 +108,18 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  icons:{
-    width:250,
-    length:250,
-    borderRadius:10,
-    marginRight:20,
+  iconContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 20,
+  },
+  icon: {
+    width: 80,
+    height: 80, 
+    borderRadius: 10,
+    marginHorizontal: 20,
+  },
+  register:{
+
   }
 });
